@@ -1,5 +1,6 @@
-import { Column, Entity, PrimaryColumn } from 'typeorm'
+import { BeforeInsert, Column, Entity, PrimaryColumn } from 'typeorm'
 import { IUser } from './dtos'
+import { randomUUID } from 'crypto'
 
 @Entity('user')
 export class User implements IUser {
@@ -8,4 +9,9 @@ export class User implements IUser {
 
   @Column({ type: 'varchar' })
   name!: string
+
+  @BeforeInsert()
+  protected setId () {
+    this.userId = randomUUID()
+  }
 }
