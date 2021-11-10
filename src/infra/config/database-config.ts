@@ -15,7 +15,8 @@ export const connectionOptions: ConnectionOptions = {
     type: 'redis',
     options: {
       host: process.env.REDIS_HOST,
-      port: process.env.REDIS_PORT
+      port: process.env.REDIS_PORT,
+      password: process.env.REDIS_PASSWORD
     },
     duration: 20000
   },
