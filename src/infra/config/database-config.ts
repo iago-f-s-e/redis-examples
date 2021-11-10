@@ -14,7 +14,7 @@ export const connectionOptions: ConnectionOptions = {
   cache: {
     type: 'redis',
     options: {
-      uri: process.env.REDIS_TLS_URL,
+      uri: process.env.REDIS_URL,
       tls: {
         rejectUnauthorized: false
       }
