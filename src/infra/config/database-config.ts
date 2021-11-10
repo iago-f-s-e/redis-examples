@@ -12,12 +12,6 @@ export const connectionOptions: ConnectionOptions = {
   password: process.env.TYPEORM_PASSWORD,
   database: process.env.TYPEORM_DATABASE,
   cache: {
-    type: 'redis',
-    options: {
-      host: process.env.REDIS_HOST,
-      port: process.env.REDIS_PORT,
-      password: process.env.REDIS_PASSWORD
-    },
     duration: 20000
   },
   ssl: {
