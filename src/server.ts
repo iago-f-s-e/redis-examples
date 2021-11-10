@@ -1,5 +1,6 @@
 import 'dotenv/config'
 import 'reflect-metadata'
+import './jobs'
 import { Server as SetupServer } from '@overnightjs/core'
 import cors from 'cors'
 import helmet from 'helmet'
