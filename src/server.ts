@@ -8,6 +8,7 @@ import express, { Application } from 'express'
 import { createConnection, getConnection } from 'typeorm'
 import { startFactories } from './middlewares/start-factories'
 import { UserController } from './controllers'
+import { connectionOptions } from './infra/config'
 
 export class Server extends SetupServer {
   constructor () {
@@ -43,7 +44,7 @@ export class Server extends SetupServer {
   }
 
   public async startConnection (): Promise<void> {
-    await createConnection()
+    await createConnection(connectionOptions)
   }
 
   public async closeConnection (): Promise<void> {

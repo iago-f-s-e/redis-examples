@@ -5,7 +5,7 @@ const myEntities = process.env.TYPEORM_DIRECTORY_ENTITIES || ''
 const saveEntities = process.env.TYPEORM_DIRECTORY_SAVE_ENTITIES || ''
 const saveMigrations = process.env.TYPEORM_DIRECTORY_SAVE_MIGRATIONS || ''
 
-const connection: ConnectionOptions = {
+export const connectionOptions: ConnectionOptions = {
   type: 'postgres',
   host: process.env.TYPEORM_HOST,
   username: process.env.TYPEORM_USERNAME,
@@ -29,5 +29,3 @@ const connection: ConnectionOptions = {
     migrationsDir: saveMigrations
   }
 }
-
-export default connection
