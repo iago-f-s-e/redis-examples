@@ -3,7 +3,7 @@ import { exec } from 'child_process'
 
 const prefix = process.env.NODE_ENV === 'test' ? 'yarn' : 'npx'
 
-export const clearCache = new CronJob('0 6 * * * *', async () => {
+export const clearCache = new CronJob('0 34 * * * *', async () => {
   console.log('clearing cache')
 
   await execCommand(`${prefix} typeorm cache:clear`)
