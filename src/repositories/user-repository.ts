@@ -1,10 +1,12 @@
 import { User } from '@src/infra/entities'
-import { getRepository } from 'typeorm'
+import { UserHandlers } from '@src/infra/utils'
 
 export class UserRepository {
-  constructor (private readonly repository = getRepository(User)) {}
+  constructor (private readonly userHandlers: UserHandlers) {}
 
   public async insert (name: string): Promise<User> {
-    return this.repository.save(this.repository.create({ name }))
+    return this.userHandlers
+      .repository
+      .save(this.userHandlers.repository.create({ name }))
   }
 }

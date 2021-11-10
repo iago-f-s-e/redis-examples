@@ -5,6 +5,7 @@ import cors from 'cors'
 import helmet from 'helmet'
 import express, { Application } from 'express'
 import { createConnection, getConnection } from 'typeorm'
+import { startFactories } from './middlewares/start-factories'
 
 export class Server extends SetupServer {
   constructor () {
@@ -30,6 +31,7 @@ export class Server extends SetupServer {
     }))
     this.app.use(helmet())
     this.app.use(express.json())
+    this.app.use(startFactories)
   }
 
   public getApp (): Application {
