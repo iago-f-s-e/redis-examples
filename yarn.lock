@@ -1075,6 +1075,13 @@
     "@types/node" "*"
     moment ">=2.14.0"
 
+"@types/dotenv@^8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@types/dotenv/-/dotenv-8.2.0.tgz#5cd64710c3c98e82d9d15844375a33bf1b45d053"
+  integrity sha512-ylSC9GhfRH7m1EUXBXofhgx4lUWmFeQDINW5oLuS+gxWdfUeW4zJdeVTYVkexEW+e2VUvlZR2kGnGGipAWR7kw==
+  dependencies:
+    dotenv "*"
+
 "@types/express-serve-static-core@^4.17.18":
   version "4.17.25"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.25.tgz#e42f7046adc65ece2eb6059b77aecfbe9e9f82e0"
@@ -1766,6 +1773,11 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dotenv@*, dotenv@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
+
 dotenv@^8.2.0:
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
@@ -2336,7 +2348,7 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-helmet@*:
+helmet@*, helmet@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/helmet/-/helmet-4.6.0.tgz#579971196ba93c5978eb019e4e8ec0e50076b4df"
   integrity sha512-HVqALKZlR95ROkrnesdhbbZJFi/rIVSoNq6f3jA/9u6MIbTsPh3xZwihjeI5+DO/2sOV6HMHooXcEOuwskHpTg==
