@@ -1,5 +1,5 @@
 {
-  "name": "redis-examples",
+  "name": "redis-with-typeorm",
   "version": "1.0.0",
   "description": "Repositorio para praticar redis",
   "main": "src/index.ts",
