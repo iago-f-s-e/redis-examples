@@ -6,6 +6,7 @@ import helmet from 'helmet'
 import express, { Application } from 'express'
 import { createConnection, getConnection } from 'typeorm'
 import { startFactories } from './middlewares/start-factories'
+import { UserController } from './controllers'
 
 export class Server extends SetupServer {
   constructor () {
@@ -20,7 +21,9 @@ export class Server extends SetupServer {
   }
 
   private setupControllers (): void {
-    this.addControllers([])
+    this.addControllers([
+      new UserController()
+    ])
   }
 
   private setupExpress (): void {
